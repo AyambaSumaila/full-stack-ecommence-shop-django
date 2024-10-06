@@ -1,0 +1,9 @@
+venv
+db.sqlite3
+myshop/__pycache__
+shop/__pycache__
+shop/migrations
+orders/__pycache__
+orders/migrations
+cart/__pycache__
+cart/migrations
