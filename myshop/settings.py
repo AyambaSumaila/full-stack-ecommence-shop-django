@@ -34,14 +34,10 @@ SECRET_KEY = 'django-insecure-uapxw1h5vd^ax3ln2g)op-5x*1n-ngp6b-hvj0xbjn(!b4px3y
 DEBUG = True
 
 ALLOWED_HOSTS = []
+STATIC_URL = 'static/'
 
-""" 
 MEDIA_URL='media/'
 MEDIA_ROOT=BASE_DIR/'media'
-
-"""
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Application definition
 CART_SESSION_ID = 'cart'
@@ -135,7 +131,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
