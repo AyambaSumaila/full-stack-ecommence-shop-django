@@ -15,11 +15,11 @@
       <a href="/" class="logo text-light">Shopprite</a>
     </div>
     <div id="subheader">
-      <div class="cart">
+      <div class="cart text-dark">
         {% with total_items=cart|length %}
           {% if total_items > 0 %}
             Your cart:
-            <a href="{% url "cart:cart_detail" %}">
+            <a href="{% url "cart:cart_detail" %}" class="text-dark">
               {{ total_items }} item{{ total_items|pluralize }},
               ${{ cart.get_total_price }}
             </a>

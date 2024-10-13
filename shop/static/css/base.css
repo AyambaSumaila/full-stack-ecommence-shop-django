@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5 , h6 {
 
 a {
     text-decoration:none;
-    color:#1df01d;
+    color:#55f01d;
 }
 
 a:hover {
@@ -20,8 +20,8 @@ a:hover {
 }
 
 a.button, input[type="submit"] {
-    color:#fff;
-    background:#59bb5e;
+    color:#210505;
+    background:#080c08;
     border-radius:4px;
     padding:10px 20px;
     font-size:14px;
@@ -63,8 +63,8 @@ tbody tr.subtotal {
 }
 
 thead th, tbody tr.total {
-    background:#5993bb;
-    color:#fff;
+    background:#56e925;
+    color:#f5efef;
     font-weight:bold;
 }
 
@@ -148,7 +148,7 @@ ul.errorlist {
 }
 
 #sidebar {
-    width:220px;
+    width:100px;
     padding:30px 20px 0 0;
     float:left;
 }
@@ -169,7 +169,7 @@ ul.errorlist {
 }
 
 #sidebar ul li.selected {
-    background:#5993bb;
+    background:#09161f;
     border-radius:4px;
 }
 
@@ -179,7 +179,7 @@ ul.errorlist {
 
 #main {
     float:left;
-    width: 96%;
+    width: 100%;
     margin-right:-220px;
     overflow:hidden;
 }
@@ -192,9 +192,10 @@ ul.errorlist {
     line-height:1.2;
 }
 
-.product-list .item img {
+.product-list .item img::hover {
     width:100%;
     margin-bottom:8px;
+    backface-visibility: hidden;
 }
 
 .product-detail {
@@ -327,4 +328,8 @@ form div.field {
     background:#efefef;
     color:#666;
     border-radius:4px;
+}
+
+#sidebar{
+
 }

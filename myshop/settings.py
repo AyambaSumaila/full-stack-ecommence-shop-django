@@ -9,8 +9,16 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os 
 from pathlib import Path
+from decouple import config  # type: ignore
+
+STRIPE_PUBLISHABLE_KEY=config('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY=config('STRIPE_SECRET_KEY')
+STRIPE_API_VERSION = config('STRIPE_API_VERSION', default='2024-09-30')
+
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,8 +35,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+""" 
 MEDIA_URL='media/'
 MEDIA_ROOT=BASE_DIR/'media'
+
+"""
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Application definition
 CART_SESSION_ID = 'cart'
 INSTALLED_APPS = [
@@ -40,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cart',
     'orders',
+    'payment',
     'shop',
 ]
 
